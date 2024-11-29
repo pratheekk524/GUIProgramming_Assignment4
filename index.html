@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratheek's Dynamic Multiplication Table</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,9 +30,13 @@
             <label for="end-column">End Column: <span id="end-column-value">0</span></label>
             <input type="range" id="end-column" min="-50" max="50" value="0" />
         </div>
+        <button id="add-tab">Add Tab</button>
+        <div id = "tabs">
+            <ul id = "tabs-ul"></ul>
+        </div>
     </div>
-    <div id="table-container"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

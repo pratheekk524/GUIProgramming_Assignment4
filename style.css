@@ -39,19 +39,32 @@ button {
     margin-top: 10px;
 }
 
-#table-container {
-    margin-top: 20px;
-    max-width: 100%;
-    max-height: 500px; 
-    overflow: auto;
-    border: 1px solid #ddd; 
-    background-color: white; 
+.tab-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #7f4caf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
 }
 
+.tab-button.active {
+    background-color: #ffc0cb;
+}
+
+.scroll-container {
+    max-width: 100%;          
+    max-height: 400px;        
+    overflow: auto;           
+    border: 1px solid #ddd; 
+    background-color: white;  
+}
+
+/* Table Styles */
 table {
     border-collapse: collapse;
-    width: max-content;
-    max-width: 100%; 
+    width: max-content;        
 }
 
 td, th {
@@ -82,4 +95,60 @@ tr {
 
 tr:nth-child(even) {
     background-color: #2678bb;
+}
+
+.delete-tab {
+    display: inline-block;      
+    margin-left: 5px;             
+    background-color: #ff4d4d;   
+    color: white;                 
+    border: none;                
+    border-radius: 50%;         
+    width: 18px;                 
+    height: 18px;              
+    font-size: 14px;            
+    line-height: 18px;         
+    text-align: center;          
+    cursor: pointer;              
+    vertical-align: middle;        
+}
+
+.delete-tab:hover {
+    background-color: #cc0000;     
+}
+
+
+#tabs-ul {
+    display: flex;              
+    flex-wrap: nowrap;          
+    list-style-type: none;     
+    padding: 0;                 
+    margin: 0;                   
+}
+
+#tabs-ul li {
+    display: inline-flex;        
+    align-items: center;        
+    margin-right: 10px;         
+}
+
+#tabs-ul li a {
+    text-decoration: none; 
+    padding: 5px 10px;            
+    background-color: #7f4caf;    
+    color: white;                 
+    border-radius: 5px;           
+}
+
+#tabs-ul li a:hover {
+    background-color: #5a3396;    
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+input.error {
+    border: 1px solid red;
 }
